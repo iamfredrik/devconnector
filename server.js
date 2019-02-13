@@ -11,7 +11,7 @@ const posts = require('./routes/api/posts');
 const app = express();
 
 // Body parser middleware
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // DB Config
@@ -35,7 +35,7 @@ app.use('/api/profile', profile);
 app.use('/api/posts', posts);
 
 // Server static assets if in production
-if(process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
   // Set static folder
   app.use(express.static('client/build'));
 
@@ -46,4 +46,4 @@ if(process.env.NODE_ENV === 'production') {
 
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, () => { console.log("Server running on port" + port); });
