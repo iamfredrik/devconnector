@@ -2,6 +2,7 @@
   "name": "devconnector",
   "version": "1.0.0",
   "description": "Social network for developers",
+  "private": true,
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
